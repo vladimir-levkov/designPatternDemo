@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane fx:controller="view.GameView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111"
+            xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <VBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                <Label fx:id="winner" text=""/>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                <children>
+                    <VBox prefHeight="200.0" prefWidth="100.0">
+                        <ImageView fx:id="computerChoice" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"/>
+                    </VBox>
+                    <VBox prefHeight="200.0" prefWidth="100.0">
+                        <ImageView fx:id="playerChoice" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"/>
+                    </VBox>
+                </children>
+            </HBox>
+        </VBox>
+    </center>
+    <top>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Label text="Computer score:"/>
+                        <Label fx:id="computerScore" text="0"/>
+                    </children>
+                </VBox>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Label text="Player score:"/>
+                        <Label fx:id="playerScore" text="0"/>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </top>
+    <left>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Computer choices"/>
+                <Label text=""/>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@paper.jpg"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@rock.jpg"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@scissors.jpg"/>
+                    </image>
+                </ImageView>
+            </children>
+        </VBox>
+    </left>
+    <right>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Player choices"/>
+                <Label text="Please click yours!"/>
+                <ImageView fx:id="playerChoicePaper" onMouseClicked="#onPlayerChoicePaper" fitHeight="150.0"
+                           fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@paper.jpg"/>
+                    </image>
+                </ImageView>
+                <ImageView fx:id="playerChoiceRock" onMouseClicked="#onPlayerChoiceRock" fitHeight="150.0"
+                           fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@rock.jpg"/>
+                    </image>
+                </ImageView>
+                <ImageView fx:id="playerChoiceScissors" onMouseClicked="#onPlayerChoiceScissors" fitHeight="150.0"
+                           fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@scissors.jpg"/>
+                    </image>
+                </ImageView>
+            </children>
+        </VBox>
+    </right>
+</BorderPane>
